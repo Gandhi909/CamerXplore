@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Finlandica:ital,wght@0,400..700;1,400..700&family=Fjalla+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+     --primary: #ce1126;
+     --primary-transparent: #ce112719;
+     --secondary: #007a5e;
+     --accent: #fcd116;
+      --headFoot: #fafafa;
+     --backgroundBlur: #4742422b;
+     --text-card: #0d1510;
+     --background: #fafafa;
+      --text-color: #0d1510;
+       --card: #ffffff;
+       --bacgroundOpacity: #e6c0c36c;
+       --linecolor: #aeafafa2;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --section-color: #cdcbcb;
+
+}
+body.dark-mode {
+    --bacgroundOpacity: #1c191c6c;
+    --headFoot: #0d151079;
+    --card: #121915;
+    --background: #0a0f0c;
+    --text-color: #fafafa;
+    --text-card: #f1f5f2;
+    --backgroundBlur: #ffffff37;
+     --linecolor: #c8ebeba2;
+     transition: 0.5s;
+     --section-color: #2828287a;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+     background-color: #ffffff; 
+     transition: 0.5s;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.hero-video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
+}
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    background-color: var(--bacgroundOpacity);
+    z-index: 2;
+}
+.hero-vid {
+    width: 100%;
+    height: 100%;
+}
+.hero-content {
+    display: flex;
+    padding: 3rem 1rem;
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+}
+.txtOpacity {
+    background-color: var(--primary-transparent);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: bold;
+    color: var(--primary);
+    border: solid 0.5px var(--primary);
+    font-family: var(--font-sans);
+    width: 300px;
+}
+.text h1 {
+    font-weight: bold;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 .block1 {
+    background: linear-gradient(to right,var(--primary),var(--accent),var(--secondary));
+     font-size: 5rem;
+     background-clip: text;
+     color: transparent;
+     background-position: fixed;
+     animation: textanime 8s linear infinite;
+     background-size: 500%;
+}
+@keyframes textanime {
+    to{
+        background-position: 200%;
+    }
+}
+h1 .block2{
+     font-size: 4rem;
+     color: red;
+}
+h1 .block3{
+ position: relative;
+  font-size: 3rem;
+}
+.block3::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    border-radius: 20px;
+}
+
+.text {
+     padding-left: 2rem;
+}
+.text-hero {
+    font-family: var(--font-sans);
+    padding: 5px;
+    margin: 5px 0 5px 5px;
+    background-color: var(--backgroundBlur);
+    width: 300px;
+    border-radius: 10px;
+    overflow: cover;
+}
+.btn-xplore {
+    padding: 0.9rem 5rem;
+    margin: 10px 0 0 5px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-style: var(--font-mono);
+    font-weight: bold;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+   align-items: center;
+}
+.hero-container {
+    flex-grow: 1;
+    flex-basis: 200px;
+    z-index: 999;
+}
+.hero .monument {
+    position: relative;
+    overflow: hidden;
+}
+.hero .monumentsimg {
+   width: 100%;
+   height: 100%;
+}
+.monumentsimg .monumentImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: upDown 15s infinite linear;
+}
+@keyframes upDown {
+    0%{
+        transform: translateY(30px);
+    }
+    20%{
+        transform: translateY(-30px);
+    }
+    40%{
+        transform: translateY(30px);
+    }
+    60%{
+        transform: translateY(-30px);
+    }
+    80%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(-30px);
+    }
+}
+
+@media (max-width:750px) {
+    .text h1 {
+    font-size: 4rem;
+}
+.txtOpacity {
+   width: 300px;
+}
+.text h1 {
+    text-align: center;
+}
+.hero-content{
+    flex-direction: column;
+}
+.text {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     padding-right: 2.5rem;
+}
+.hero .monument {
+    display: none;
+}
+.text-hero{
+    text-align: center;
+}
+}
+/* section stats*/
+.stats {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem 3rem;
+    gap: 1.5rem;
+    background: var(--section-color);
+    
+}
+.statsCard {
+    flex-grow: 1;
+    background-color: var(--backgroundBlur);
+    flex-basis: 100px;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 10px;
+    border: 0.5px solid var(--linecolor);
+}
+.textStats {
+       font-weight: bold;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+.infoText {
+    font-family: var(--font-sans);
+}
+@media (max-width:520px) {
+    .statsCard{
+        width: 50px;   
+    }
+    .textStats{
+        font-size: 1.1rem;
+    }
+}

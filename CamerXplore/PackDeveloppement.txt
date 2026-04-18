@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #fafafa;
+  --foreground: #0d1510;
+  --card: #ffffff;
+  --card-foreground: #0d1510;
+  --popover: #ffffff;
+  --popover-foreground: #0d1510;
+  --primary: #ce1126;
+  --primary-foreground: #ffffff;
+  --secondary: #007a5e;
+  --secondary-foreground: #ffffff;
+  --muted: #f1f5f2;
+  --muted-foreground: #5e6d64;
+  --accent: #fcd116;
+  --accent-foreground: #4b3e00;
+  --destructive: #b91c1c;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8e4;
+  --input: #e2e8e4;
+  --ring: #ce1126;
+  --chart-1: #007a5e;
+  --chart-2: #ce1126;
+  --chart-3: #fcd116;
+  --chart-4: #004d3b;
+  --chart-5: #a30d1e;
+  --sidebar: #003d2f;
+  --sidebar-foreground: #f1f5f2;
+  --sidebar-primary: #ce1126;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #004d3b;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #005240;
+  --sidebar-ring: #fcd116;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.5rem;
+  --shadow-x: 0px;
+  --shadow-y: 4px;
+  --shadow-blur: 10px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.05;
+  --shadow-color: 0,0,0;
+  --shadow-2xs: 0px 4px 10px 0px hsl(0,0,0 / 0.03);
+  --shadow-xs: 0px 4px 10px 0px hsl(0,0,0 / 0.03);
+  --shadow-sm: 0px 4px 10px 0px hsl(0,0,0 / 0.05), 0px 1px 2px -1px hsl(0,0,0 / 0.05);
+  --shadow: 0px 4px 10px 0px hsl(0,0,0 / 0.05), 0px 1px 2px -1px hsl(0,0,0 / 0.05);
+  --shadow-md: 0px 4px 10px 0px hsl(0,0,0 / 0.05), 0px 2px 4px -1px hsl(0,0,0 / 0.05);
+  --shadow-lg: 0px 4px 10px 0px hsl(0,0,0 / 0.05), 0px 4px 6px -1px hsl(0,0,0 / 0.05);
+  --shadow-xl: 0px 4px 10px 0px hsl(0,0,0 / 0.05), 0px 8px 10px -1px hsl(0,0,0 / 0.05);
+  --shadow-2xl: 0px 4px 10px 0px hsl(0,0,0 / 0.13);
+  --tracking-normal: -0.01em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: #0a0f0c;
+  --foreground: #f1f5f2;
+  --card: #121915;
+  --card-foreground: #f1f5f2;
+  --popover: #121915;
+  --popover-foreground: #f1f5f2;
+  --primary: #e31b32;
+  --primary-foreground: #ffffff;
+  --secondary: #009673;
+  --secondary-foreground: #ffffff;
+  --muted: #1a241e;
+  --muted-foreground: #a0afaa;
+  --accent: #fcd116;
+  --accent-foreground: #0a0f0c;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #223028;
+  --input: #223028;
+  --ring: #e31b32;
+  --chart-1: #009673;
+  --chart-2: #e31b32;
+  --chart-3: #fcd116;
+  --chart-4: #006b52;
+  --chart-5: #ff4d5e;
+  --sidebar: #0d1510;
+  --sidebar-foreground: #f1f5f2;
+  --sidebar-primary: #e31b32;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1a241e;
+  --sidebar-accent-foreground: #fcd116;
+  --sidebar-border: #223028;
+  --sidebar-ring: #e31b32;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.5rem;
+  --shadow-x: 0px;
+  --shadow-y: 8px;
+  --shadow-blur: 15px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.4;
+  --shadow-color: 0,0,0;
+  --shadow-2xs: 0px 8px 15px 0px hsl(0,0,0 / 0.20);
+  --shadow-xs: 0px 8px 15px 0px hsl(0,0,0 / 0.20);
+  --shadow-sm: 0px 8px 15px 0px hsl(0,0,0 / 0.40), 0px 1px 2px -1px hsl(0,0,0 / 0.40);
+  --shadow: 0px 8px 15px 0px hsl(0,0,0 / 0.40), 0px 1px 2px -1px hsl(0,0,0 / 0.40);
+  --shadow-md: 0px 8px 15px 0px hsl(0,0,0 / 0.40), 0px 2px 4px -1px hsl(0,0,0 / 0.40);
+  --shadow-lg: 0px 8px 15px 0px hsl(0,0,0 / 0.40), 0px 4px 6px -1px hsl(0,0,0 / 0.40);
+  --shadow-xl: 0px 8px 15px 0px hsl(0,0,0 / 0.40), 0px 8px 10px -1px hsl(0,0,0 / 0.40);
+  --shadow-2xl: 0px 8px 15px 0px hsl(0,0,0 / 1.00);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+
+  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
+  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
+  --tracking-normal: var(--tracking-normal);
+  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
+  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
+  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    letter-spacing: var(--tracking-normal);
+  }
+}
